@@ -1,20 +1,22 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
 public class Argument : MonoBehaviour
 {
-    public ArgumentData argumentData; // °ÔÀÓ ¸Å´ÏÀú ½ºÅ©¸³Æ® ÂüÁ¶
-    public TextMeshProUGUI textLevel; // ·¹º§ Ç¥½Ã¿ë ÅØ½ºÆ®
-    protected TextMeshProUGUI textName; // ÀÌ¸§ Ç¥½Ã¿ë ÅØ½ºÆ®
-    protected TextMeshProUGUI textInformation; // ¼³¸í Ç¥½Ã¿ë ÅØ½ºÆ®
+    //public ArgumentData argumentData; // ê²Œì„ ë§¤ë‹ˆì € ìŠ¤í¬ë¦½íŠ¸ ì°¸ì¡°
+    public TextMeshProUGUI textLevel; // ë ˆë²¨ í‘œì‹œìš© í…ìŠ¤íŠ¸
+    protected TextMeshProUGUI textName; // ì´ë¦„ í‘œì‹œìš© í…ìŠ¤íŠ¸
+    protected TextMeshProUGUI textInformation; // ì„¤ëª… í‘œì‹œìš© í…ìŠ¤íŠ¸
     
-    Compensation compensation; // º¸»ó ½ºÅ©¸³Æ® ÂüÁ¶
-    SkillActive skill; // ½ºÅ³ È°¼ºÈ­ ½ºÅ©¸³Æ® ÂüÁ¶
+    Compensation compensation; // ë³´ìƒ ìŠ¤í¬ë¦½íŠ¸ ì°¸ì¡°
 
+    //SkillActive skill; // ìŠ¤í‚¬ í™œì„±í™” ìŠ¤í¬ë¦½íŠ¸ ì°¸ì¡°
+    
+*-
     public void Awake()
     {
-        // Áõ°­ °ü·Ã ÅØ½ºÆ® ÄÄÆ÷³ÍÆ® ÃÊ±âÈ­
+        // ì¦ê°• ê´€ë ¨ í…ìŠ¤íŠ¸ ì»´í¬ë„ŒíŠ¸ ì´ˆê¸°í™”
         TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();
         textName = texts[0];
         textLevel = texts[1];
@@ -23,38 +25,38 @@ public class Argument : MonoBehaviour
 
     void OnEnable()
     {
-        // ÇØ´ç Áõ°­ÀÌ ¾î¶² Áõ°­ÀÎÁö¿¡ µû¶ó Ãâ·Â ÅØ½ºÆ® ¼³Á¤ÇÏ±â
+        // í•´ë‹¹ ì¦ê°•ì´ ì–´ë–¤ ì¦ê°•ì¸ì§€ì— ë”°ë¼ ì¶œë ¥ í…ìŠ¤íŠ¸ ì„¤ì •í•˜ê¸°
         switch (argumentData.textType)
         {
-            // °¢ Áõ°­ Å¸ÀÔ¿¡ µû¶ó¼­ Ãâ·ÂµÇ´Â Á¤º¸¸¦ ´Ù¸£°Ô ¼³Á¤
+            // ê° ì¦ê°• íƒ€ì…ì— ë”°ë¼ì„œ ì¶œë ¥ë˜ëŠ” ì •ë³´ë¥¼ ë‹¤ë¥´ê²Œ ì„¤ì •
 
-            // ¹Ì¸® Á¤ÀÇµÈ ÅØ½ºÆ® Å¸ÀÔÀ» ÇØ´ç º¯¼ö·Î ÀúÀåÇÏ¿© Ãâ·Â¿¡ »ç¿ë
-            case ArgumentData.TextType.Áö¿ø:
-                textName.text = argumentData.AugmentName;// Áõ°­ ÀÌ¸§
-                textLevel.text = "a"; // Áõ°­ ·¹º§(Áö¿ø Áõ°­ x)
-                textInformation.text = argumentData.ArgumentImformation; // Áõ°­ ¼³¸í
+            // ë¯¸ë¦¬ ì •ì˜ëœ í…ìŠ¤íŠ¸ íƒ€ì…ì„ í•´ë‹¹ ë³€ìˆ˜ë¡œ ì €ì¥í•˜ì—¬ ì¶œë ¥ì— ì‚¬ìš©
+            case ArgumentData.TextType.ì§€ì›:
+                textName.text = argumentData.AugmentName;// ì¦ê°• ì´ë¦„
+                textLevel.text = "a"; // ì¦ê°• ë ˆë²¨(ì§€ì› ì¦ê°• x)
+                textInformation.text = argumentData.ArgumentImformation; // ì¦ê°• ì„¤ëª…
                 break;
-            case ArgumentData.TextType.Æ¯¼öÁö¿ø:
+            case ArgumentData.TextType.íŠ¹ìˆ˜ì§€ì›:
                 textName.text = argumentData.AugmentName;
                 textLevel.text = "lv." + (argumentData.Level + 2).ToString();
                 textInformation.text = argumentData.ArgumentImformation;
                 break;
-            case ArgumentData.TextType.ÄğÅ¸ÀÓ:
+            case ArgumentData.TextType.ì¿¨íƒ€ì„:
                 textName.text = argumentData.AugmentName;
                 textLevel.text = "lv." + (argumentData.Level + 2).ToString();
                 textInformation.text = string.Format(argumentData.ArgumentImformation, argumentData.SkillCoolTime[argumentData.Level]);
                 break;
-            case ArgumentData.TextType.Áö¼Ó:
+            case ArgumentData.TextType.ì§€ì†:
                 textName.text = argumentData.AugmentName;
                 textLevel.text = "lv."+ (argumentData.Level+2).ToString();
                 textInformation.text = string.Format(argumentData.ArgumentImformation, argumentData.Skillduration[argumentData.Level]);
                 break;
 
-            // ³ª¸ÓÁö Æ¯Á¤ ÅØ½ºÆ® Å¸ÀÔÀÇ °ªÀ» ³Ö¾î¾ß ÇÏ´Â Áõ°­µéÀ» Ã³¸®
-            case ArgumentData.TextType.±âÅ¸:
+            // ë‚˜ë¨¸ì§€ íŠ¹ì • í…ìŠ¤íŠ¸ íƒ€ì…ì˜ ê°’ì„ ë„£ì–´ì•¼ í•˜ëŠ” ì¦ê°•ë“¤ì„ ì²˜ë¦¬
+            case ArgumentData.TextType.ê¸°íƒ€:
                 break;
         }
-        if (argumentData.argumentType.Equals("±âº»"))
+        if (argumentData.argumentType.Equals("ê¸°ë³¸"))
             return;
         else
         {
@@ -66,25 +68,25 @@ public class Argument : MonoBehaviour
 
     public void ApplyArgument()
     {
-        // Áõ°­ Àû¿ë ·ÎÁ÷
-        // ¿¹: ÇÃ·¹ÀÌ¾îÀÇ ´É·ÂÄ¡ Áõ°¡, ½ºÅ³ Ãß°¡ µî
-        // ÀÌ ºÎºĞÀº °ÔÀÓÀÇ ±¸Ã¼ÀûÀÎ ·ÎÁ÷¿¡ µû¶ó ´Ù¸£°Ô ±¸ÇöµÉ ¼ö ÀÖ½À´Ï´Ù.
-        if(argumentData.argumentType.Equals("Áö¿ø"))
+        // ì¦ê°• ì ìš© ë¡œì§
+        // ì˜ˆ: í”Œë ˆì´ì–´ì˜ ëŠ¥ë ¥ì¹˜ ì¦ê°€, ìŠ¤í‚¬ ì¶”ê°€ ë“±
+        // ì´ ë¶€ë¶„ì€ ê²Œì„ì˜ êµ¬ì²´ì ì¸ ë¡œì§ì— ë”°ë¼ ë‹¤ë¥´ê²Œ êµ¬í˜„ë  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+        if(argumentData.argumentType.Equals("ì§€ì›"))
         {
-            // Áö¿ø ½ºÅ©¸³Æ® Àû¿ë
-            compensation.Aplyment(); // º¸»ó È°¼ºÈ­
+            // ì§€ì› ìŠ¤í¬ë¦½íŠ¸ ì ìš©
+            compensation.Aplyment(); // ë³´ìƒ í™œì„±í™”
             return;
         }
-        argumentData.Level += 1; // Áõ°­ ·¹º§ Áõ°¡
-        if (argumentData.argumentType.Equals("½ºÅ³"))
+        argumentData.Level += 1; // ì¦ê°• ë ˆë²¨ ì¦ê°€
+        if (argumentData.argumentType.Equals("ìŠ¤í‚¬"))
         {
             skill.GetComponent<SkillActive>();
-            skill.Aplyment(); // ½ºÅ³ È°¼ºÈ­
+            skill.Aplyment(); // ìŠ¤í‚¬ í™œì„±í™”
         }
-        else if(argumentData.argumentType.Equals("Å°´Ù¿î½ºÅ³"))
+        else if(argumentData.argumentType.Equals("í‚¤ë‹¤ìš´ìŠ¤í‚¬"))
         {
             skill.GetComponent<SkillActive>();
-            skill.Aplyment(); // ½ºÅ³ È°¼ºÈ­ 
+            skill.Aplyment(); // ìŠ¤í‚¬ í™œì„±í™” 
             
 
 
@@ -93,3 +95,6 @@ public class Argument : MonoBehaviour
     }
 
 }
+
+*/
+
