@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class objectmanager : MonoBehaviour
+public class game_manager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
