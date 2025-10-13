@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class Shootingboll : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    public Transform FirePoint;
 
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -16,6 +15,7 @@ public class Shootingboll : MonoBehaviour
 
             Vector2 ShootDirection = new Vector2(Mathf.Cos(angle_radian), Mathf.Sin(angle_radian)).normalized;
 
+
             Shoot(ShootDirection);
         }
 
@@ -24,7 +24,10 @@ public class Shootingboll : MonoBehaviour
 
     public void Shoot(Vector2 Direction)
     {
+
         GameObject Boll = poolmanager.instance.poolActive.Get(0);
+
+        Boll.transform.position = FirePoint.transform.position;
 
         BollMove bollMove = Boll.GetComponent<BollMove>();
 
@@ -32,3 +35,4 @@ public class Shootingboll : MonoBehaviour
 
     }
 }
+ 

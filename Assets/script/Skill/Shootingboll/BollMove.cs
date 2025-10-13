@@ -7,19 +7,16 @@ public class BollMove : MonoBehaviour
     public float BollSpeed;
     private Vector2 BollDirect;
 
+    void Awake()
+    {
+        Boll = GetComponent<Rigidbody2D>();
+    }
     public void Initialize(Vector2 Direction)
     {
         BollDirect = Direction;
 
+        Boll.linearVelocity = BollDirect * BollSpeed;
     }
 
-    public void FixedUpdate()
-    {
-        if(Boll != null)
-        {
-            Boll.linearVelocity = BollDirect * BollSpeed;
-        }
-
-    }
 
 }
