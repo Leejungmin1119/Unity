@@ -35,7 +35,8 @@ public class Hack_Aimhelper : MonoBehaviour
     
     public void Aimline_Rotation(float angle)
     {
-        AimHelper_Object.parent = transform;
-        AimHelper_Object.localRotation = Quaternion.Euler(0f,0f,angle);
+        AimHelper_Object.Rotate(0f, 0f, angle);
+
+        print(AimHelperAngle);
     }
 }
