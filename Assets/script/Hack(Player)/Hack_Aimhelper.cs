@@ -8,7 +8,6 @@ public class Hack_Aimhelper : MonoBehaviour
     public Transform AimHelper_Object;
     void Update()// Aimhelper 기능 구현 함수
     {
-
         // 1. A,D 입력 받기(이게임에서는 A와 D로 움직입니다.)
         float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -22,10 +21,6 @@ public class Hack_Aimhelper : MonoBehaviour
 
             if (AimHelperAngle < 0f) { AimHelperAngle -= 360; }
 
-
-
-
-
         }
         
 
@@ -35,8 +30,10 @@ public class Hack_Aimhelper : MonoBehaviour
     
     public void Aimline_Rotation(float angle)
     {
-        AimHelper_Object.Rotate(0f, 0f, angle);
+        Transform parentTransform = transform.parent;
 
-        print(AimHelperAngle);
+        
+        parentTransform.rotation = Quaternion.Euler(0, 0, angle);
+
     }
 }
