@@ -17,9 +17,22 @@ public class Hack : MonoBehaviour
         Hack_Manager.instance.Player_Object = this.gameObject;
     }
 
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
+
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("check");
+        // 부딫힌 것이 적이였을경우 막기 실패 => 체력 1감소
+        if (collision.gameObject.CompareTag("enermy"))
+        {
+            Player_Hp--;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
 
 

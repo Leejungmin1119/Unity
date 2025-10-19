@@ -12,8 +12,8 @@ public class Argument : MonoBehaviour
     Compensation compensation; // 보상 스크립트 참조
 
     //SkillActive skill; // 스킬 활성화 스크립트 참조
+
     
-*-
     public void Awake()
     {
         // 증강 관련 텍스트 컴포넌트 초기화
