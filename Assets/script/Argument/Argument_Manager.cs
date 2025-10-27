@@ -88,8 +88,7 @@ public class Argument : MonoBehaviour
             skill.GetComponent<SkillActive>();
             skill.Aplyment(); // 스킬 활성화 
             
-
-
+            
         }
 
     }

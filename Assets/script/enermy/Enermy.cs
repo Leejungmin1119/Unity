@@ -40,6 +40,7 @@ public class Enermy : MonoBehaviour
             Enermy_Hp -= Hack_Manager.instance.hack.Player_Damage;
 
             collision.gameObject.SetActive(false);
+            Game_Manager.instance.AnermyKill++;
             Hack_Manager.instance.Exp(Enermy_Exp);
         }
         if (Enermy_Hp <= 0)

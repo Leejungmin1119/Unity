@@ -32,7 +32,6 @@ public class Hack_Aimhelper : MonoBehaviour
     {
         Transform parentTransform = transform.parent;
 
-        
         parentTransform.rotation = Quaternion.Euler(0, 0, angle);
 
     }
