@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: "\uCFE8\uD0C0\uC784\uCC45"
   m_EditorClassIdentifier: 
   argument_Type: 2
-  Argument_Id: 0
+  Argument_Id: 6
   Argument_Level: 0
-  Argument_Max_Level: 0
-  Name: Boll
+  Argument_Max_Level: 100
+  Name: Cooltime_Book
+  ArgumentImformation: "\uCFE8\uD0C0\uC784 \uAC10\uC18C 5%"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0

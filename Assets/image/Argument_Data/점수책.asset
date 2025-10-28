@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: "\uC810\uC218\uCC45"
   m_EditorClassIdentifier: 
   argument_Type: 2
-  Argument_Id: 0
+  Argument_Id: 4
   Argument_Level: 0
-  Argument_Max_Level: 0
-  Name: Boll
+  Argument_Max_Level: 100
+  Name: Point_Book
+  ArgumentImformation: "\uCD94\uAC00 \uC810\uC218 +5%"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0

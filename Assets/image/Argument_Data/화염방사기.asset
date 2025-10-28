@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2366e1034240514428b1b59571c30eec, type: 3}
   m_Name: "\uD654\uC5FC\uBC29\uC0AC\uAE30"
   m_EditorClassIdentifier: 
-  Argument_Id: 0
+  argument_Type: 0
+  Argument_Id: 3
   Argument_Level: 0
-  Name: Boll
+  Argument_Max_Level: 10
+  Name: Fire
+  ArgumentImformation: "\uC6D0\uBFD4 \uC8FC\uC704\uB85C \uD654\uC5FC \uBC1C\uC0AC"
   Icon: {fileID: 0}
   baseDaamge: 1
   baseCount: 1

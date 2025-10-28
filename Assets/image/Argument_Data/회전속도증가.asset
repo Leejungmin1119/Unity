@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: "\uD68C\uC804\uC18D\uB3C4\uC99D\uAC00"
   m_EditorClassIdentifier: 
   argument_Type: 2
-  Argument_Id: 0
+  Argument_Id: 7
   Argument_Level: 0
-  Argument_Max_Level: 0
-  Name: Boll
+  Argument_Max_Level: 10
+  Name: Rotation
+  ArgumentImformation: "\uD68C\uC804\uC18D\uB3C4 +10%"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0

@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2366e1034240514428b1b59571c30eec, type: 3}
   m_Name: "\uCCB4\uB825\uCC45"
   m_EditorClassIdentifier: 
-  Argument_Id: 0
+  argument_Type: 0
+  Argument_Id: 5
   Argument_Level: 0
-  Name: Boll
+  Argument_Max_Level: 100
+  Name: Health_Book
+  ArgumentImformation: "\uCD5C\uB300\uCCB4\uB825+1"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0

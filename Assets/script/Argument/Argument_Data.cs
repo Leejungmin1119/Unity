@@ -16,6 +16,8 @@ public class Argument_Data : ScriptableObject
     public int Argument_Max_Level;
     [Header("Argument Name")]
     public string Name;
+    [TextArea(3, 10)]
+    public string ArgumentImformation;
     public Sprite Icon;
     [Header("element")]
     public float baseDaamge;

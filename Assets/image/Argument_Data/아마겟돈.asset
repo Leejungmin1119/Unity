@@ -12,15 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2366e1034240514428b1b59571c30eec, type: 3}
   m_Name: "\uC544\uB9C8\uAC9F\uB3C8"
   m_EditorClassIdentifier: 
-  Argument_Id: 0
+  argument_Type: 0
+  Argument_Id: 2
   Argument_Level: 0
-  Name: Boll
+  Argument_Max_Level: 10
+  Name: Amageton
+  ArgumentImformation: "\uC544\uB9C8\uAC9F\uB3C8 \uBC1C\uC0AC\uD568"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 10
+  baseCount: 0
   Damages:
-  - 0
-  - 0
-  - 0
+  - 10
+  - 20
+  - 30
+  - 40
+  - 50
+  - 60
+  - 70
   counts: 000000000000000000000000
   projectile: {fileID: 0}

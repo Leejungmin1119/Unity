@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: "\uCCB4\uB825\uD68D\uB4DD"
   m_EditorClassIdentifier: 
   argument_Type: 1
-  Argument_Id: 0
+  Argument_Id: 1
   Argument_Level: 0
   Argument_Max_Level: 0
-  Name: Boll
+  Name: Health
+  ArgumentImformation: "\uCCB4\uB825 \uD68C\uBCF5 30%"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2366e1034240514428b1b59571c30eec, type: 3}
   m_Name: "\uBB34\uC801"
   m_EditorClassIdentifier: 
-  argument_Type: 2
-  Argument_Id: 0
+  argument_Type: 0
+  Argument_Id: 1
   Argument_Level: 0
-  Argument_Max_Level: 0
-  Name: Boll
+  Argument_Max_Level: 10
+  Name: Super
+  ArgumentImformation: "\uC8FC\uAE30\uC801\uC73C\uB85C \uBB34\uC801\uC774 \uB418\uB294
+    \uBCF4\uD638\uB9C9 \uD615\uC131"
   Icon: {fileID: 0}
-  baseDaamge: 1
-  baseCount: 1
+  baseDaamge: 0
+  baseCount: 0
   Damages:
   - 0
   - 0
